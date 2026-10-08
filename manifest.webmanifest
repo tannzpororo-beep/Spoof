@@ -1,0 +1,10 @@
+{
+  "name":"AnimForge — Roblox Animation ID Manager",
+  "short_name":"AnimForge",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#080611",
+  "theme_color":"#120b24",
+  "description":"Offline Roblox Animation ID Manager",
+  "icons":[]
+}

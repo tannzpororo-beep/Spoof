@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#120b24">
+<meta name="description" content="Offline Roblox Animation ID Manager">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+<title>AnimForge — Roblox Animation ID Manager</title>
+</head>
+<body>
+<div class="bg"></div>
+<header class="topbar">
+  <div>
+    <div class="brand">ANIM<span>FORGE</span></div>
+    <div class="sub">ROBLOX ANIMATION ID MANAGER</div>
+  </div>
+  <button id="installBtn" class="ghost hidden">Install App</button>
+</header>
+
+<main class="wrap">
+  <section class="hero card">
+    <div>
+      <span class="badge">OFFLINE • LOCAL ONLY</span>
+      <h1>Animation ID<br><span>Manager</span></h1>
+      <p>Kelola mapping Animation ID dan generate Lua untuk project Roblox milikmu.</p>
+    </div>
+    <div class="heroIcon">🎬</div>
+  </section>
+
+  <section class="grid">
+    <div class="card editor">
+      <div class="sectionHead"><h2>Add Mapping</h2><span id="count">0 ITEMS</span></div>
+      <label>Nama Animasi<input id="name" placeholder="Contoh: Idle / Attack / Dance"></label>
+      <div class="two">
+        <label>Original ID<input id="oldId" inputmode="numeric" placeholder="1234567890"></label>
+        <label>Replacement ID<input id="newId" inputmode="numeric" placeholder="9876543210"></label>
+      </div>
+      <label>Catatan <textarea id="note" placeholder="Opsional"></textarea></label>
+      <button id="addBtn" class="primary">＋ Add Animation</button>
+      <div class="actions">
+        <button id="exportBtn" class="secondary">Export JSON</button>
+        <label class="secondary fileBtn">Import JSON<input id="importFile" type="file" accept=".json"></label>
+        <button id="clearBtn" class="danger">Clear All</button>
+      </div>
+    </div>
+
+    <div class="card generator">
+      <div class="sectionHead"><h2>Generated Lua</h2><button id="copyBtn" class="small">Copy</button></div>
+      <textarea id="output" spellcheck="false" readonly></textarea>
+      <p class="hint">Script ini dibuat untuk mengarahkan AnimationId pada project Roblox yang kamu kontrol.</p>
+    </div>
+  </section>
+
+  <section class="card listCard">
+    <div class="sectionHead"><h2>Animation Mappings</h2><span id="storage">LOCAL STORAGE</span></div>
+    <div id="list" class="list"></div>
+  </section>
+</main>
+
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
